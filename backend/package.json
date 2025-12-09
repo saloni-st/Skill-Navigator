@@ -1,0 +1,46 @@
+{
+  "name": "skillnavigator-backend",
+  "version": "1.0.0",
+  "description": "Backend for Career Guidance Expert System - Hybrid AI with Rule-Based Inference Engine and LLM Refinement",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest",
+    "test:unit": "jest --testPathPattern='tests/(inference|confidence|llm).*\\.test\\.js'",
+    "test:integration": "jest --testPathPattern='tests/api-integration.test.js'",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:groq": "node test_groq.js",
+    "seed": "node seed-database.js"
+  },
+  "keywords": [
+    "career-guidance",
+    "expert-system",
+    "inference-engine",
+    "ai",
+    "ollama"
+  ],
+  "author": "SkillNavigator Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.2.1",
+    "groq-sdk": "^0.7.0",
+    "helmet": "^7.1.0",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
+  }
+}
